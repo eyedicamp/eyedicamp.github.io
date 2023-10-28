@@ -1,8 +1,11 @@
 ---
 layout: post
 title: 사과와 로봇
-author: 신승윤
-tags: 기타
+date:   2016-03-15
+excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
+tag: 
+ - IT issues
+comments: true
 ---
 
 > 매년 신제품이 넘치는 스마트폰 시장, 출시되는 제품들의 격차가 미미하여 어떤 제품이 자신의 니즈에 가장 부합하는지 알기 힘들다. 해당 survey에서는 최신 스마트폰들의 스펙과 성능을 비교하여 어떤 제품이 독자에게 가장 알맞은 제품인지 찾아가는데 도움을 주고자 한다.
@@ -28,13 +31,13 @@ tags: 기타
 
 다음 표는 삼성 공식 홈페이지 와 애플 공식 홈페이지 의 제품 스펙을 참고하여 제작하였다.
 
-![table1]({{site.baseurl}}/images/20231006/table1.jpg)
+![table1]({{site.baseurl}}/assets/img/apple_and_robot/table1.jpg)
 
 위 표를 보면 전반적인 스펙은 갤럭시 S 시리즈가 iPhone 15 시리즈에 비해 우세한 것을 확인할 수 있다. iPhone 시리즈는 6 ~ 8GB, 갤럭시 S 시리즈는 8 ~12GB의 SDRAM을 탑재하였고, 디스플레이의 ppi와 FPS 또한 갤럭시 S 시리즈에서 높다. 카메라는 iPhone 15 시리즈 모두 최대 4800만 화소로 동일한 반면 , 갤럭시 S 시리즈는 S23과 S23+는 최대 5000만 화소로 동일한 카메라를 탑재하였지만, S23 Ultra는 최대 2억 화소로 여타 제품들과 4배 이상 차이가 나는 것을 확인할 수 있다. 배터리의 용량은 스마트폰의 크기에 비례하는 경향이 있어, iPhone Plus와 Pro Max에서 다른 iPhone 제품들 대비 큰 용량을 가지고 있고, 갤럭시 S23, S23+, S23 Ultra로 갈수록 배터리 용량이 크다.
 
 위 내용에서 프로세서는 iPhone과 갤럭시 S시리즈의 제조회사가 다를 뿐더러 이름과 코어의 개수 등으로 CPU의 성능을 명확히 비교할 수가 없기 때문에 이는 벤치마크 점수로 비교하고자 한다. 벤치마크란 연산 성능을 수치화 하기 위해 각 환경에서 동일한 프로그램을 실행시켜 해당 기기의 성능을 표준화하여 점수로 나타내는 것을 의미한다. 벤치마크용 프로그램은 Geekbench 6 을 사용하였다.
 
-![table2]({{site.baseurl}}/images/20231006/table2.jpg)
+![table2]({{site.baseurl}}/assets/img/apple_and_robot/table2.jpg)
 
 놀랍게도 벤치마크 성능면에서는 iPhone 15 시리즈가 갤럭시 S23 시리즈를 압도하는 모습을 보인다. 실성능에 더 가까운 Multi-Core로 비교해 보면, 각 시리즈에서 최저점을 기록한 갤럭시 S23과 iPhone 15는 1.28배의 성능 차이를 기록하였고, 최고점을 기록한 갤럭시 S23 Ultra와 iPhone 15 Pro는 1.43배의 성능 차이가 나타났다.
 
