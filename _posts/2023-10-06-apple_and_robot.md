@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 사과와 로봇
-date:   2016-03-15
-excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
+date:   2023-10-28
+excerpt: "사과와 로봇"
 tag: 
  - IT issues
 comments: true
