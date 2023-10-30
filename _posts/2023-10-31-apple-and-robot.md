@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 사과와 로봇
-date:   2023-10-28
+date:   2023-10-31
 excerpt: "사과와 로봇"
 tag: 
  - IT issues
