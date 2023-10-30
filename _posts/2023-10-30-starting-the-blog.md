@@ -14,7 +14,7 @@ comments: true
 
 ## 블로그의 방향성
 
-해당 블로그는 기본적으로 [AI Expert Roadmap]https://i.am.ai/roadmap/?utm_source=GitHub&utm_medium=Referral&utm_campaign=AI%20Expert%20Roadmap%20Interactive을 따라가며 배우고 기록할 만한 내용들을 선정하여 AI, Data Engineering 등의 주제를 기반으로 진행할 예정이다.
+해당 블로그는 기본적으로 [AI Expert Roadmap](https://i.am.ai/roadmap/?utm_source=GitHub&utm_medium=Referral&utm_campaign=AI%20Expert%20Roadmap%20Interactive)을 따라가며 배우고 기록할 만한 내용들을 선정하여 AI, Data Engineering 등의 주제를 기반으로 진행할 예정이다.
 
 ## 블로그의 목표
 
