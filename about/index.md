@@ -1,26 +1,26 @@
 ---
 layout: page
-title: About the Theme
-tags: [about, Jekyll, theme, moon]
-date: 2016-03-21
+title: About Me
+tags: [about]
+date: 2023-11-03
 comments: false
 ---
     
-<center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
+<center> Hey! I'm <a href="http://taylantatli.github.io/Moon"><b>Eyedicamp(신승윤)</b></a> and Welcome to my Profile! </center>
 
-## Features
-* Minimal, you can focus on your content
-* Responsive
-* Disqus integration
+## My Profile
+* 부산대학교 정보컴퓨터공학전공 (2018.03 ~)
+* 관심분야 : 파이썬을 이용한 데이터마이닝과 AI
+<!-- * Disqus integration
 * Syntax highlighting
 * Optional post image
 * Social icons
 * Page for sharing projects
 * Optional background image
 * Simple navigation menu
-* MathJax support
+* MathJax support -->
 
-## Preview
+<!-- ## Preview
 
 {% capture images %}
     https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png
@@ -34,4 +34,4 @@ See a [live version of Moon](http://taylantatli.github.io/Moon) hosted on GitHub
 
 To learn how to install and use this theme check out the [Setup Guide](http://taylantatli.me/Moon/moon-theme/) for more information.
       
-[Install Moon](https://github.com/TaylanTatli/Moon){: .btn}
+[Install Moon](https://github.com/TaylanTatli/Moon){: .btn} -->
