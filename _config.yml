@@ -30,12 +30,12 @@ disqus_shortname:   eyedicamp-github-pages
 
 # Social
 # if you don't have any of social below, comment the line.
-#google:
-  #plus:            #username
-  #analytics:
-  #verify:
-  #ad-client:
-  #ad-slot:
+google:
+  # plus:            #username
+  analytics:        G-XT1CJSKN6X
+  verify:
+  ad-client:        ca-pub-9653153828350594
+  ad-slot:
 #bing-verify:
 email:              wuwu1230@naver.com
 #twitter:            username
