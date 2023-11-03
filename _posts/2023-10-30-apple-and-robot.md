@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "사과와 로봇"
-date:   2023-10-31
+date:   2023-10-30
 excerpt: "애플이냐 안드로이드냐 그것이 문제로다"
 tag: 
  - IT

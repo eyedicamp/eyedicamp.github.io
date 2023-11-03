@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "블로그를 시작하며"
-date:   2023-10-30
+date:   2023-10-29
 excerpt: "시작은 미약하지만 끝은 창대할 블로그의 시작"
 tag:
-- etc
+- AI Expert Roadmap
 comments: true
 ---
 
