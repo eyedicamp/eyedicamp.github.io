@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "관계형 vs 비관계형 데이터베이스"
-date:   2023-11-05
+date:   2023-11-04
 excerpt: "관계형 DB와 비관계형 DB에 관하여"
 tag: 
  - AI Expert Roadmap
