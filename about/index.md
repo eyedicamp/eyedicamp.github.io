@@ -6,11 +6,12 @@ date: 2023-11-03
 comments: false
 ---
     
-<center> Hey! I'm <a href="http://taylantatli.github.io/Moon"><b>Eyedicamp(신승윤)</b></a> and Welcome to my Profile! </center>
+<center> Hey! I'm <a href="https://github.com/eyedicamp"><b>Eyedicamp(신승윤)</b></a> and Welcome to my Profile! </center>
 
 ## My Profile
 * 부산대학교 정보컴퓨터공학전공 (2018.03 ~)
 * 관심분야 : 파이썬을 이용한 데이터마이닝과 AI
+
 <!-- * Disqus integration
 * Syntax highlighting
 * Optional post image
