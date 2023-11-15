@@ -23,6 +23,7 @@ comments: false
 
 ## My Projects
 * **삼성중공업 산학협력과제** (2023.03 ~ 2023.07)
+    * PostgreSQL, Docker, Grafana를 통한 데이터 시각화
     * XGBoost와 Transformer를 이용한 전력 분석 및 예측
 
 * BTC 등 여러 crypto currency market price 예측 (2023.09 ~ 진행중)
