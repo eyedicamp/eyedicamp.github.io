@@ -10,6 +10,8 @@ comments: false
 
 <br><br>
 
+![]({{site.baseurl}}/assets/img/about/my_pic.jpg)
+
 ## My Profile
 * 부산대학교 정보컴퓨터공학전공 (2018.03 ~ 2024.08(에정))
 
@@ -17,7 +19,7 @@ comments: false
 
 * 강점 : Python, 영어회화
 
-* 취미 : 게임, 드럼, 스키, 스케이트보드, 농구, 탁구, 음악(hip-hop / k-pop)
+<!-- * 취미 : 게임, 드럼, 스키, 탁구, 농구, 스케이트보드, 음악감상 -->
 
 <br><br>
 
@@ -31,27 +33,16 @@ comments: false
 
 <br><br>
 
-<!-- * Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support -->
+## My Certificates
+* **TOEIC : 975점**(2023.11.12)
 
-<!-- ## Preview
+* TOPCIT : 495점(2023.10.28)
 
-{% capture images %}
-    https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png
-    https://cloud.githubusercontent.com/assets/754514/14509716/61ac6c8e-01d6-11e6-879f-8308883de790.png
-{% endcapture %}
-{% include gallery images=images caption="Screenshots of Moon Theme" cols=2 %}
+<br><br>
 
-See a [live version of Moon](http://taylantatli.github.io/Moon) hosted on GitHub.
+## Contact
+* GitHub : <a href="https://github.com/eyedicamp"><b>eyedicamp</b></a>
 
-## Getting Started
+* Instagram : <a href="https://www.instagram.com/dss__sy/"><b>@dss__sy</b></a>
 
-To learn how to install and use this theme check out the [Setup Guide](http://taylantatli.me/Moon/moon-theme/) for more information.
-      
-[Install Moon](https://github.com/TaylanTatli/Moon){: .btn} -->
+* Email : wuwu1230@naver.com
