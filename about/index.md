@@ -10,7 +10,7 @@ comments: false
 
 <br><br>
 
-![]({{site.baseurl}}/assets/img/about/my_pic.jpg)
+![A picture of me]({{site.baseurl}}/assets/img/about/my_pic.jpg){: width="30%" height="30%"}
 
 ## My Profile
 * 부산대학교 정보컴퓨터공학전공 (2018.03 ~ 2024.08(에정))
