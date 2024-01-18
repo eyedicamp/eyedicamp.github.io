@@ -37,8 +37,9 @@ Graph를 이용한 딥러닝의 목적은 Graph를 입력으로 하고, output�
 
 
 ![picture of deep learing in graphs]({{site.baseurl}}/assets/img/Why-Graphs/graph-deep-learning.png)
-  
-  
+
+<br>
+
 ### Representation Learning in Graphs
 
 이러한 deep learing을 위해서는 graph를 적절한 형태로 변형하는 것이 중요하다. 예를 들어 관계가 많거나 유사한 node들을 가깝게 embedding 하는 등, Feature의 특징을 잘 표현하는 embedding으로 representation 해야한다.
@@ -46,7 +47,7 @@ Graph를 이용한 딥러닝의 목적은 Graph를 입력으로 하고, output�
 
 ![picture of representation learning in graphs]({{site.baseurl}}/assets/img/Why-Graphs/representation-learing.png)
 
-
+<br>
 
 ### Course Outline
 아래는 앞으로 진행할 스터디 순서이다.
@@ -54,7 +55,7 @@ Graph를 이용한 딥러닝의 목적은 Graph를 입력으로 하고, output�
 ![picture of representation learning in graphs]({{site.baseurl}}/assets/img/Why-Graphs/course-outline.png)
 
 
-
+<br>
 
 ### 출처, 더 궁금하다면?
 * [Stanford CS224W: Machine Learning with Graphs | 2021 | Lecture 1.1 - Why Graphs](https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1&t=79s)
