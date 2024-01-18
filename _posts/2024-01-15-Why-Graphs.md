@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Why Graphs"
-date:   2024-01-17
+title: "Why Graphs?"
+date:   2024-01-15
 excerpt: "그래프를 사용해야하는 이유"
 tag: 
  - Machine Learning with Graphs
