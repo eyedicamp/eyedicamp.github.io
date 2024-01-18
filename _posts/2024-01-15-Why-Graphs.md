@@ -77,4 +77,4 @@ Graph를 이용한 딥러닝의 목적은 Graph를 입력으로 하고, output�
 <br>
 
 ### 출처, 더 궁금하다면?
-[Stanford CS224W: Machine Learning with Graphs | 2021 | Lecture 1.1 - Why Graphs](https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1&t=79s)
+[Stanford CS224W: Machine Learning with Graphs | 2021 | Lecture 1.1 - Why Graphs](https://www.youtube.com/watch?v=JAB_plj2rbA&list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn&index=1&t=0s)
