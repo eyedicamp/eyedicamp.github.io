@@ -9,7 +9,7 @@ tag:
 comments: true
 ---
 
-### Classic Graph ML Tasks
+## Classic Graph ML Tasks
 
 Graph ML은 세가지 Level로 구분할 수 있다. Node Level, Link Level, 그리고 Subgraph Level이다. 이번 글에서는 이러한 레벨에 따른 Graph ML의 사례들에 대해 이야기 해보도록 하겠다.
 
@@ -24,7 +24,7 @@ Graph ML은 세가지 Level로 구분할 수 있다. Node Level, Link Level, 그
 <br>
 <br>
 
-### Node-Level ML Tasks
+## Node-Level ML Tasks
 
 Node Level의 Task는 node의 property를 예측하는 목적을 가지고 있다. 강의에서 그 예시로 사용한 Protein Folding Problem은 각 node(단백질읠 구성하는 아미노산)의 배열을 분석하여 node들의 거리관계(edge)에 대한 상호작용의 계산을 통해 protien의 3차원 구조를 예측한다. 
   
@@ -36,7 +36,7 @@ Node Level의 Task는 node의 property를 예측하는 목적을 가지고 있�
 <br>
 <br>
 
-### Edge-Level ML Tasks
+## Edge-Level ML Tasks
 
 Edge Level의 Task는 주로 두 node 사이의 missing link가 존재하는지를 예상하고 이를 추가할지 말지 결정하는 목적을 가진다.
 
@@ -59,7 +59,7 @@ Edge Level의 Task는 주로 두 node 사이의 missing link가 존재하는지�
 <br>
 <br>
 
-### Community(Subgraph)-Level ML Tasks
+## Community(Subgraph)-Level ML Tasks
 
 Community(Subgraph) Level에서는 전체 Graph의 부분 Graph를 활용하기 위한 학습을 진행한다. 예를 들어 도로의 일부분을 Node로 설정하고, 각 Node들 사이의 연결부를 Edge로 설정하여, Node들의 교통상태를 통해 목적지까지의 예정 시간을 추정할 수 있다.
 
@@ -71,7 +71,7 @@ Community(Subgraph) Level에서는 전체 Graph의 부분 Graph를 활용하기 
 <br>
 <br>
 
-### Graph-Level ML Tasks
+## Graph-Level ML Tasks
 
 Graph Level에서는 Graph 전체에 대한 학습을 진행한다. 이를 통해 신약개발에 쓰일 후보 물질의 분자구조를 만들어내거나, 이미 존재하는 분자를 어떻게 수정하면 원하는 작용을 추가할 수 있는지 찾아낸다. 
 
