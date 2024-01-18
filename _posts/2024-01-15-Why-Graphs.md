@@ -16,7 +16,7 @@ comments: true
 하지만 이 방법들만으로는 처리하기 까다로운 형태의 데이터들도 존재한다. 그 중 이번 스터디에서 알아볼 것은 Graph이다. Graph는 실생활에서 존재하는 많은 현상/관계들을 표현할 수 있다.
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Why-Graphs/graph-data.png" style="width: 100%/"/>
+  <img src="{{site.baseurl}}/assets/img/Why-Graphs/graph-data.png" style="width: 60%"/>
 </p>
 <!-- ![picture about graph datas]({{site.baseurl}}/assets/img/Why-Graphs/graph-data.png){: width="30%" height="30%"} -->
 
