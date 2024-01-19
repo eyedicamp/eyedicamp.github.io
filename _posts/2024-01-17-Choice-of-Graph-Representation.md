@@ -64,7 +64,7 @@ Connected Graph와 Disconnected Graph는 Connected Component의 개수로 구분
 Bipartite Graph는 Node의 종류가 2개인 그래프를 의미한다. (2개 이상인 경우 Multipartite라고 한다.) 단, 이때 Edge는 종류가 다른 Node들 사이만을 연결한다. 예를들어 논문과 저자, 영화와 배우의 관계를 표현할 때 사용할 수 있다.
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Choice-of-Graph-Representation/bipartite.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Choice-of-Graph-Representation/bipartite.png" style="width: 30%"/>
 </p>
 
 <br>
