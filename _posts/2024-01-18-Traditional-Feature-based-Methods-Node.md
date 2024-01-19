@@ -37,6 +37,8 @@ Node-level의 ML 학습은 semi-supervised 형식으로 진행된다. 예를들�
   <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Node/classification.png" style="width: 70%"/>
 </p>
 
+<br>
+
 Node-Level에서의 goal은 각 Node의 구조와 position정보를 feature로 설명하는 것이다.
 
 <p align="center">
@@ -71,7 +73,7 @@ Eigenvector Centrality는 한 Node가 중요한 Node들을 neighbor로 가지고
   <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Node/eigenvector.png" style="width: 80%"/>
 </p>
 
-$\lambda_{max}$는 항상 양수이며 고유하며, leading eigenvector $c_{max}$는 centrality를 위해 사용된다.
+\\[lambda_{max}\\]는 항상 양수이며 고유하며, leading eigenvector \\[c_{max}\\]는 centrality를 위해 사용된다.
 
 <br>
 
