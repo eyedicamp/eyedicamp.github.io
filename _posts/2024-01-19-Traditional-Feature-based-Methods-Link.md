@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Traditional Feature-based Methods : Link"
-date:   2024-01-18
+date:   2024-01-19
 excerpt: "전통적인 feature-based 방법들(Link-Level)"
 tag: 
  - Machine Learning with Graphs
