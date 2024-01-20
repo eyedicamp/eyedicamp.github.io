@@ -127,12 +127,17 @@ Graphlet Degree Vector(GDV)는 Node에 대한 Graphlet 기반의 feature이다. 
   <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Node/graphlet-example.png" style="width: 70%"/>
 </p>
 
+<br>
+<br>
+<br>
 
-## 1강 Summary
+## Node-Level Features: Summary
 
 <p align="center">
   <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Node/summary.png" style="width: 60%"/>
 </p>
+
+<br>
 
 ### 출처, 더 궁금하다면?
 [Stanford CS224W: ML with Graphs | 2021 | Lecture 2.1 - Traditional Feature-based Methods: Node​](https://youtu.be/3IS7UhNMQ3U?si=0PHfZ8raPp7Wl6vb)
