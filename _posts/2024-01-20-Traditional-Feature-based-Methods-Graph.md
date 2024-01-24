@@ -9,7 +9,7 @@ tag:
 comments: true
 ---
 
-## Graph-level Task and Features
+## Graph-level Features
 
 Graph-Level Feature의 목표는 전체 그래프의 구조를 나타내는 것이다. Graph-Level의 Feature에 대해 설명하기 위해선 먼저 Kernel Methods를 이해해야한다.
 
@@ -59,90 +59,140 @@ Graph Kernel의 목적은 feature vector \\(\phi(G)\\)를 Design 하는 것이�
 
 ## Graphlet Features
 
+Node Degree의 수보다 조금 더 구체적인 요소를 feature로 사용하는 방법은 Graphlet을 사용하는 방법이다. 이는 Graph 내의 서로 다른 graphlet의 개수를 세는데, 이때 graphlet은 서로 연결되지 않아도 되고, rooted(Graphlet 내에서 Node의 위치가 정해진)되지 않아도 된다.
 
-
-<br>
-
-## Link-Level Featrues
-
-### Overview
-
-Link-Level Feature는 크게 3가지로 나눌 수 있다.
-
-* Distance-based feature
-* Local neighborhood overlap
-* Global neighborhood overlap
+아래는 이해를 돕기위해 Graph의 Node 수가 3, 4인 경우에서, 서로 연결되지 않아도 되고 unrooted한 Graphlet들을 나타낸 그림이다.
 
 <br>
-
-### Distance-Based Features
-
-Distance-Based Feature의 대표적인 것으로는 Shortest-path distance between two nodes 즉, 두 Node 사이의 최단거리를 활용하는 방법이 있다.
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Link/short.png" style="width: 80%"/>
-</p>
-
-이 방식은 Neighborhood overlap의 degree 즉, 두 Node가 공유하는 Neighbor의 수를 고려하지 못해 Connection의 강함을 비교할 수 없다. 예를들어 위 예제에서는 B와 H가 더 많은 이웃을 고려하므로 다른 거리가 2인 관계들보다 더 강한 Connection을 가지지만, 최단거리 방식으로는 이를 알 수 없다.
-
-<br>
-<br>
-
-### Local Neighborhood Overlap
-
-<p align="center">
-  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Link/neighbor.png" style="width: 70%"/>
-</p>
-
-1. Common Neighbors
-
-첫번째 방식인 Common neighbors 방식은 단순히 Node v1과 v2의 공유 이웃의 개수를 사용하는 방식이다. 하지만 이 방식에서는 이웃의 수가 많은 Node가 큰 값을 가지게 된다는 허점이 존재한다.
-
-2. Jaccard's Coefficient
-
-두번째 방식은 v1과 v2의 공유 이웃 수를 v1과 v2 각각의 이웃 수 합으로 나눈 값을 사용하는 것이다. 이를 통해 이웃이 많은 Node에 손해를 주어 첫번째 방법의 문제를 해결하였다.
-
-3. Adamic-Adar Index
-
-마지막 방식은 모든 교집합 노드에 대해 교집합 Node Degree의 로그 역수값을 모두 합하는 것이다. 이 방식은 Degree가 낮은 공유 이웃이 많으면 유리하고, Degree가 낮은 이웃이 많으면 손해를 본다. 이 방식은 이웃의 이웃과 새로운 Link를 생성하는 경우가 잦은 Social-Network에서 잘 사용된다.
-
-<br>
-
-하지만 이 방식들 또한 단점을 가지고 있다. 바로 공유 이웃이 없으면 상대적으로 가까운 pair이던 먼 pair이던 0의 값을 가진다는 것이다. 이를 해결하기 위해 Global neighborhood overlap 방식을 사용하여 전체 Graph를 고려한다.
-
-<br>
-<br>
-<br>
-
-### Global Neighborhood Overlap
-
-Global Neighborhood Overlap에서는 Kats index를 사용한다. 이는 두 Node 사이의 모든 길이의 Path를 count 하는 방식으로, 계산복잡도가 높을 것 같지만, 1강에서 배운 Adjacency matrix를 사용하면 간단하게 계산할 수 있다.
-
-<p align="center">
-  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Link/katz.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/graphlet.png" style="width: 60%"/>
 </p>
 
 <br>
 
-위 사진은 길이가 2인 Path의 수를 Count 하는 방법을 설명하고 있다. 먼저 u에서 v로의 Path라고 가정하면, u의 Neighbor들과 v 사이의 Path를 계산한다. u에서 u의 Neighbor에게 가는 Path는 길이가 1이고 하나 뿐일 것이므로, 이 값들을 모두 합하면 u에서 v까지 가는 모든 path의 수를 구할 수 있게 된다.
+Graphlet feature을 사용할 때는, 주어진 Graph에서 정해진 크기의 Graphlet들의 개수를 세어 아래 그림처럼 vector로 나타낸다. 
+
+<br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Link/katz-index.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/graphlet-example.png" style="width: 60%"/>
 </p>
 
-이렇게 모든 Path를 더할 때, 길이가 긴 Path일수록 weight를 적게 부여하여 feature값을 계산한다. 아래의 공식은 위 공식을 closed-form으로 표현한 것이다.
-
-<br>
-<br>
 <br>
 
-## Link-Level Features: Summary
+이렇게 구한 vector를 위에서 언급했던 \\(\phi(G)\\)로 사용하여, 두 그래프의 Graphlet vector를 normalize하여(그래프의 크기가 다르면 곱연산이 불가능하기 때문.) 곱연산을 한다. 그러면 \\(K(G,G') = \phi(G)^{T}\phi(G')\\)의 형태가 되며, 이렇게 구한 K를 두 Graph의 유사도 feature로 사용하는 것이다.
+
+아래는 normalize 하는 방법에 대한 설명이다.(여기서는 \\(\phi(G)\\)대신 \\(\f(G)\\)로 나타내었다.)
+
+<br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Link/summary.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/normalize.png" style="width: 70%"/>
+</p>
+
+<br>
+
+이렇게 Node Degree의 단점을 극복한 Graphlet 방식도 완벽하지는 못하다. 그중 가장 큰 단점은 바로 시간복잡도이다. 크기가 \\(n\\)인 Graph에서 크기가 \\(k\\)인 Graphlet의 수를 세는 task는 \\(n^k\\)의 시간복잡도를 가진다. 이러한 문제는 subgraph isomorphism test가 NP-hard 문제이기 때문에 해결이 불가능하다. 그나마 괜찮은 해결책은 Graph 자체의 Node Degree를 \\(d\\)로 작게 한정하면 \\(O(nd^{k-1})\\)로 괜찮은 효율을 내는 알고리즘을 만들 수 있다.
+
+그렇다면 좀 더 효율적인 Graph Kernel을 Design할 수는 없을까?
+
+<br>
+<br>
+<br>
+
+## Weisfeiler-Lehman Kernel
+
+Weisfeiler-Lehman Kernel은 Graphlet을 사용한 방법보다 더 효율적인 feature descriptor(\\(\phi(G)\\))를 찾는 것을 목표로 한다.
+
+이 방법은 기존에 one-hop neighborhood 정보만을 지녔던 Bag-of-NodeDegrees를 일반화하여 multi-hop neighborhood에 대한 정보를 지닌 feature를 사용한다. 이러한 방법을 사용하기 위해 Color refinement라는 알고리즘을 사용한다.
+
+<br>
+
+### Color Refinement
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/color.png" style="width: 70%"/>
+</p>
+
+위는 Color Refinement 알고리즘을 한번에 나타낸 공식이다. K step이 지난 후, \\(c^{(K)}(v)\\)가 K-hop neighborhood의 구조를 요약하는 정보를 담게 된다.
+
+공식으로만 이야기하면 직관적으로 이해하기 힘드니 그림으로 설명해보도록 하겠다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/color-ex1.png" style="width: 70%"/>
+</p>
+
+<br>
+
+먼저 각 Node에 초기 색을 부여한다. 여기서는 첫 step이기 때문에 모든 Node들이 같은 색을 가지고 있다. 이후 neighbor Node들의 색을 aggregation(vector를 연장함)한다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/color-ex2.png" style="width: 70%"/>
+</p>
+
+<br>
+
+다음으로, 생성된 vector를 Hash table을 통해 특정 색으로 mapping한다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/color-ex3.png" style="width: 70%"/>
+</p>
+
+<br>
+
+이후의 과정들은 위의 반복이다. 또다시 neighbor Node들의 색을 aggregation하고, 이를 Hash table을 이용해 mapping한다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/color-ex4.png" style="width: 70%"/>
+</p>
+
+<br>
+
+지정한 K-step을 모두 완료하면, 해당 Graph에 존재하는 색들의 개수를 세어 vector로 만든다. 이 vector가 바로 Weisfeiler-Lehman Feature이다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/color-ex5.png" style="width: 70%"/>
+</p>
+
+<br>
+
+이후 위에서 설명했던 \\(K(G,G') = \phi(G)^{T}\phi(G')\\) 형태의 공식을 통해 두 Graph의 유사도를 구한다.
+
+위에서 언급했듯, 이 방식은 Node의 수에 대해 linear한 시간복잡도를 가져 계산이 굉장히 효율적이다. 또한 각 단계에서 메모리에 각 Node의 색만 저장하면 되고, 최악의 경우 색의 수는 node의 수와 같으므로 메모리 또한 많이 사용하지 않는다. 따라서 전체 복잡도 또한 Node 수에 linear하다.
+
+<br>
+<br>
+<br>
+
+
+## Graph-Level Features: Summary
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/summary.png" style="width: 60%"/>
+</p>
+
+<br>
+<br>
+<br>
+
+## 2강 Summary
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/summary2.png" style="width: 60%"/>
 </p>
 
 <br>
 
 ### 출처, 더 궁금하다면?
-[Stanford CS224W: ML with Graphs | 2021 | Lecture 2.2 - Traditional Feature-based Methods: Link](https://youtu.be/4dVwlE9jYxY?si=kRggrAvtTLJC7pD0)
+[Stanford CS224W: ML with Graphs | 2021 | Lecture 2.3 - Traditional Feature-based Methods: Graph](https://youtu.be/buzsHTa4Hgs?si=sZBasl1tsXj6qkrH)
