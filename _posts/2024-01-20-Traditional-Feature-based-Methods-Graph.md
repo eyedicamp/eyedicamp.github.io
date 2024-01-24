@@ -13,7 +13,9 @@ comments: true
 
 Graph-Level Feature의 목표는 전체 그래프의 구조를 나타내는 것이다. Graph-Level의 Feature에 대해 설명하기 위해선 먼저 Kernel Methods를 이해해야한다.
 
-Kernel Methods는 Feature Vector 대신 Kernel을 Design하는 것으로, 전통적인 Graph-Level 예측을 위한 ML에 다방면으로 사용된다. 간단히 말하자면, K라는 Kernel이 두 data 사이의 유사도 값이고, \\(phi(G)^{T}\\)
+Kernel Methods는 Feature Vector 대신 Kernel을 Design하는 것으로, 전통적인 Graph-Level 예측을 위한 ML에 다방면으로 사용된다. 간단히 말하자면, K라는 Kernel이 두 data 사이의 유사도 값이고, \\(K(G,G') = \phi(G)^{T}\phi(G')\\)에서 \\(\phi(G)\\)는 G에 대한 Feature이다. 이렇게 Kernel이 정해지면, 해당 모델은 즉시 예측에 사용될 수 있게 된다.
+
+아래는 Kernel에 대한 자세한 설명이다.
 
 <p align="center">
   <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/kernel.png" style="width: 70%"/>
