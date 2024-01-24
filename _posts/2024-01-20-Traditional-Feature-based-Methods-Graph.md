@@ -13,29 +13,53 @@ comments: true
 
 Graph-Level Feature의 목표는 전체 그래프의 구조를 나타내는 것이다. Graph-Level의 Feature에 대해 설명하기 위해선 먼저 Kernel Methods를 이해해야한다.
 
-Kernel Methods는 Feature Vector 대신 Kernel을 Design하는 것으로, 전통적인 Graph-Level 예측을 위한 ML에 다방면으로 사용된다. 간단히 말하자면, K라는 Kernel이 두 data 사이의 유사도 값이고, \\(K(G,G') = \phi(G)^{T}\phi(G')\\)에서 \\(\phi(G)\\)는 G에 대한 Feature이다. 이렇게 Kernel이 정해지면, 해당 모델은 즉시 예측에 사용될 수 있게 된다.
+Kernel Methods는 Feature Vector 대신 Kernel을 Design하는 것으로, 전통적인 Graph-Level 예측을 위한 ML에 다방면으로 사용된다. 간단히 말하자면, K라는 Kernel은 두 data 사이의 유사도 값이고, \\(K(G,G') = \phi(G)^{T}\phi(G')\\)에서 \\(\phi(G)\\)는 G에 대한 Feature이다. 이러한 Kernel들로 Kernel Matrix를 만드는데, 이는 Graph내의 모든 pair에 대한 유사도 정보를 담고있다. 이때, Kernel Matrix는 양수의 eigenvalue를 가지고, 대칭이다. 이렇게 Kernel이 정해지면, 해당 모델은 즉시 예측에 사용될 수 있게 된다.
 
 아래는 Kernel에 대한 자세한 설명이다.
 
+<br>
+
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/kernel.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/kernel.png" style="width: 60%"/>
+</p>
+
+<br>
+<br>
+<br>
+
+## Graph Kernel : Key Idea
+
+Graph Kernel의 목적은 feature vector \\(\phi(G)\\)를 Design 하는 것이다. 이때 Bag-of-Words(BoW) 기법을 기반으로 사용하는데, BoW는 단순히 Document 내의 각 단어 갯수를 feature로 사용하는 방식이다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/node.png" style="width: 30%"/>
 </p>
 
 <br>
 
-Link Prediction에는 2가지 종류가 있다.
+이를 Graph에 적용할 때, 위의 그림처럼 Node의 수를 센다면, 4개의 Node를 가진 Graph는 모두 같은 feature를 가져 문제가 생긴다. 이를 해결하기 위해 Node의 Degree를 사용하는 방법이 고안되었다. 
 
-먼저 Random하게 Link가 missing하는 경우에는 학습시키는 과정에서 Random하게 Link들을 삭제하고 이를 예측하도록 한다. 이는 변화하지 않는 static-network, 예를들어 단백질 간의 상호작용 등에 사용될 수 있다.
+<br>
 
-다른 한가지 종류는 시간이 지날수록 변화하는 네트워크에 대해 이전 시간의 Graph를 주고 미래 시간에 새로 생겨날 Link를 찾아내는 방식이다. 이는 시간에 따라 변화하는 Social Network와 같은 evolving-network에 사용된다.
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Traditional-Feature-based-Methods-Graph/degree.png" style="width: 70%"/>
+</p>
+
+<br>
+
+위의 그림과 같이 Node의 Degree를 feature로 사용하는 경우, Node를 사용했을 때 같은 feature를 가졌던 Graph들이 다른 feature를 갖게 되어, feature가 전체 Graph에 대해 더 잘 설명하게 된다. 
+
+이처럼 Graph 전체에 대해 더 많은 정보를 담을 수 있는 feature를 만드는 것이 Graph-Level의 ML에서 중요하다. 그렇다면 Node Degree를 사용하는 방식보다 더 좋은 방식은 없을까?
 
 <br>
 <br>
 <br>
 
-## Link Prediction via Proximity
+## Graphlet Features
 
-확률을 통한 Link 예측을 할 땐, 모든 (x,y) Node pair에 대해 score c(x,y)를 계산한다. 이후 score를 정렬하여 상위 n개를 새로 나타날 Link로 예측하고, 예측값이 맞는지 실제 나타나는 Link들과 비교한다.
+
 
 <br>
 
