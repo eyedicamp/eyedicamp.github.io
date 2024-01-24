@@ -83,7 +83,7 @@ Graphlet feature을 사용할 때는, 주어진 Graph에서 정해진 크기의 
 
 이렇게 구한 vector를 위에서 언급했던 \\(\phi(G)\\)로 사용하여, 두 그래프의 Graphlet vector를 normalize하여(그래프의 크기가 다르면 곱연산이 불가능하기 때문.) 곱연산을 한다. 그러면 \\(K(G,G') = \phi(G)^{T}\phi(G')\\)의 형태가 되며, 이렇게 구한 K를 두 Graph의 유사도 feature로 사용하는 것이다.
 
-아래는 normalize 하는 방법에 대한 설명이다.(여기서는 \\(\phi(G)\\)대신 \\(\f(G)\\)로 나타내었다.)
+아래는 normalize 하는 방법에 대한 설명이다.(여기서는 \\(\phi(G)\\)대신 \\(f(G)\\)로 나타내었다.)
 
 <br>
 
