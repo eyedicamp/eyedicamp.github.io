@@ -20,7 +20,7 @@ comments: true
 
 * Sigmoid function : 실수를 (0, 1)의 범위로 변환하기 위해 사용
 
-\\(S(x) = \frac{1}{1+e^{-x}})
+\\(S(x) = \frac{1}{1+e^{-x}}\\)
 
 <br>
 <br>
@@ -50,19 +50,61 @@ Node u와 v가 Graph 내에서 Random Walk를 통해 마주칠 확률이 Graph �
 
 Unsupervised Feature Learning에서는 Graph내에서 유사도가 높은 Node들을 Embedding에서도 가깝게 만들려고 한다. 그렇다면 u라는 Node가 주어졌을 때, 가까운 Node들을 어떻게 정의할 수 있을까?
 
-
-
-<br>
+\\(N_R(u)\\)를 R이라는 Random Walk 방식으로 얻은 Node u의 neighborhood라고 했을 때, 우리의 목적은 \\(f:u \to \mathbb{R}^{d}:f(u) = z_{u}\\)의 mapping을 구하는 것이고, 이 과정에서 얻고자하는 것은 아래와 같다.
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Node-Embeddings/embedding.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math.png" style="width: 40%"/>
 </p>
 
 <br>
+
+위 식에서 \\(logP(N_{R}(u) \vert z_u)\\)를 최대로 하는 것이 학습의 목표이다.
+
+이를 위해 먼저 Graph내의 모든 노드 u에서 짧은 고정 길이의 Random walk를 진행하고, 이를 이용해 \\(N_R(u)\\)를 구한다. 이후 위의 식으로 embedding을 최적화하는 것이다.
+
+위 식을 다르게 나타내면 아래와 같다.
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math2.png" style="width: 40%"/>
+</p>
+
+<br>
+
+여기에 아래와 같이 softmax를 적용하면,
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math3.png" style="width: 40%"/>
+</p>
+
+<br>
+
+다음과 같은 최종 식이 나온다.
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math4.png" style="width: 50%"/>
+</p>
+
+<br>
+
+위 식에서 Random walk embedding을 최적화한다는 것은 곧 \\(L\\)을 최소로 만드는 \\(z_u\\)를 찾는 것이다. 하지만 위의 식에서 확인할 수 있듯, \\(V\\)에 속하는 모든 \\(u\\)와 \\(N_{R}(u)\\)에 속하는 모든 \\(v\\)를 확인하는 것은 \\(O(\vert V \vert ^2)\\)만큼의 복잡도를 가진다.
+
+이에 대한 해결책이 Negative sampling이다.
+
+<br>
 <br>
 <br>
 
+## Negative Sampling
 
+Negative Sampling을 수식으로 설명하면 다음과 같다.
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math5.png" style="width: 70%"/>
+</p>
+
+<br>
+
+풀어 말하자면, 모든 node에 대해 normalization을 진행하는 것이 아니라, k개의 랜덤한 negative sample(해당 Node와 무관한 Node)들을 추출해 이에 대해서면 normalization을 하는 것이다.
 
 <br>
 <br>
