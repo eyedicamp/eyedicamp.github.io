@@ -16,7 +16,7 @@ comments: true
 
 * Softmax function : K개의 실수로 이루어진 vector를 총합이 1인 확률 K개로 변환시키기 위해 사용
 
-\\(\sigma(z)_i = \dfrac{e^{z_i}}{\sum\limits_{j=1}^{K}e^{z_j}}\\)
+\\(\sigma(z)_{i} = \frac{e^{z_i}}{\sum_{j=1}^{K}e^{z_j}}\\)
 
 \\(E = 1 - \dfrac{\sum\limits_{i=1}^{n}(O_{i}-P_{i})^{2}}{\sum\limits_{i=1}^{n}(O_{i}-\bar{O})^{2}}\\)
 
