@@ -18,6 +18,8 @@ comments: true
 
 \\(\sigma(z)_i = \dfrac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}\\)
 
+\\(E = 1 - \dfrac{\sum\limits_{i=1}^{n}(O_{i}-P_{i})^{2}}{\sum\limits_{i=1}^{n}(O_{i}-\bar{O})^{2}}\\)
+
 <br>
 
 <p align="center">
