@@ -26,7 +26,7 @@ comments: true
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Embedding-Entire-Graphs/sum.png" style="width: 30%"/>
+  <img src="{{site.baseurl}}/assets/img/Embedding-Entire-Graphs/sum.png" style="width: 15%"/>
 </p>
 
 <br>
@@ -36,7 +36,7 @@ comments: true
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Embedding-Entire-Graphs/virtual.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/Embedding-Entire-Graphs/virtual.png" style="width: 60%"/>
 </p>
 
 <br>
@@ -66,7 +66,7 @@ Anonymous walk는 Random walk와 동일하지만, Node를 처음 방문했던 st
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Embedding-Entire-Graphs/math1.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/Embedding-Entire-Graphs/math1.png" style="width: 70%"/>
 </p>
 
 <br>
@@ -94,7 +94,7 @@ Anonymous walk는 Random walk와 동일하지만, Node를 처음 방문했던 st
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Embedding-Entire-Graphs/math3.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/Embedding-Entire-Graphs/math3.png" style="width: 70%"/>
 </p>
 
 <br>
