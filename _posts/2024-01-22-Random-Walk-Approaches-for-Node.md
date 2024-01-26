@@ -16,11 +16,11 @@ comments: true
 
 * Softmax function : K개의 실수로 이루어진 vector를 총합이 1인 확률 K개로 변환시키기 위해 사용
 
-\\(\sigma_i(z) = \frac{e^{z_i}}{\sum_{j=1}^{K}e^{z_j}}\\)
+\\[\sigma_i(z) = \frac{e^{z_i}}{\sum_{j=1}^{K}e^{z_j}}\\]
 
 * Sigmoid function : 실수를 (0, 1)의 범위로 변환하기 위해 사용
 
-\\(S(x) = \frac{1}{1+e^{-x}}\\)
+\\[S(x) = \frac{1}{1+e^{-x}}\\]
 
 <br>
 <br>
@@ -53,7 +53,7 @@ Unsupervised Feature Learning에서는 Graph내에서 유사도가 높은 Node�
 \\(N_R(u)\\)를 R이라는 Random Walk 방식으로 얻은 Node u의 neighborhood라고 했을 때, 우리의 목적은 \\(f:u \to \mathbb{R}^{d}:f(u) = z_{u}\\)의 mapping을 구하는 것이고, 이 과정에서 얻고자하는 것은 아래와 같다.
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math.png" style="width: 30%"/>
 </p>
 
 <br>
@@ -65,7 +65,7 @@ Unsupervised Feature Learning에서는 Graph내에서 유사도가 높은 Node�
 위 식을 다르게 나타내면 아래와 같다.
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math2.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math2.png" style="width: 30%"/>
 </p>
 
 <br>
@@ -73,7 +73,7 @@ Unsupervised Feature Learning에서는 Graph내에서 유사도가 높은 Node�
 여기에 아래와 같이 softmax를 적용하면,
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math3.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math3.png" style="width: 30%"/>
 </p>
 
 <br>
@@ -81,7 +81,7 @@ Unsupervised Feature Learning에서는 Graph내에서 유사도가 높은 Node�
 다음과 같은 최종 식이 나온다.
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math4.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/math4.png" style="width: 60%"/>
 </p>
 
 <br>
@@ -131,7 +131,7 @@ Stochastic Gradient Descent는 일반적인 Gradient Descent 방법과 같이 �
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/gradient.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/gradient.png" style="width: 70%"/>
 </p>
 
 <br>
@@ -141,7 +141,7 @@ Random Walk에 대한 요약을 하자면 아래와 같다.
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/summary1.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/summary1.png" style="width: 60%"/>
 </p>
 
 <br>
@@ -176,7 +176,7 @@ node2vec은 biased(확률이 모두 동일하지 않은)하고, 2nd order(직전
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/node2vec1.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Random-Walk-Approaches-for-Node/node2vec1.png" style="width: 60%"/>
 </p>
 
 <br>
@@ -193,6 +193,9 @@ node2vec은 biased(확률이 모두 동일하지 않은)하고, 2nd order(직전
 
 이러한 node2vec 알고리즘은 linear한 시간복잡도를 가지고 있고, 병렬 계산이 가능하다는 장점이 존재한다. 하지만 모든 Node에 대해 개별적인 embedding을 학습시켜야해서 Node의 수가 많은 경우 학습량이 많아진다는 단점 또한 존재한다.
 
+<br>
+<br>
+<br>
 
 ### 출처, 더 궁금하다면?
 [Stanford CS224W: ML with Graphs | 2021 | Lecture 3.2-Random Walk Approaches for Node Embeddings](https://youtu.be/Xv0wRy66Big?si=bTuYhoSDgR_9bAH-)
