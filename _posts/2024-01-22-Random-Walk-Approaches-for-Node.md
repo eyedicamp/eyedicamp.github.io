@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Random Walk Approaches for Node"
-date:   2024-01-21
+date:   2024-01-22
 excerpt: "Random Walk란?"
 tag: 
  - Machine Learning with Graphs
