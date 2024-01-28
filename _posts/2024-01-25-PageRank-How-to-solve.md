@@ -54,67 +54,67 @@ comments: true
 * Dead Ends : out-link가 없는 Node
  - 중요도가 새어나가 Graph 전체의 중요도를 0으로 만듦
 
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/PageRank-How-to-solve/dead.png" style="width: 20%"/>
+</p>
+
+<br>
+
 * Spider Traps : out-link가 특정 Node 그룹 내에서만 돌도록 형성되어 있음
  - 모든 중요도를 빨아들여 중요도를 독식함
 
-
-
-
-
-<br>
-
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/PageRank/math1.png" style="width: 15%"/>
+  <img src="{{site.baseurl}}/assets/img/PageRank-How-to-solve/spider.png" style="width: 20%"/>
 </p>
 
 <br>
 
-이러한 행렬 연산 과정을 예시로 보면 아래와 같다.
+다행히 위 2가지를 한번에 해결할 수 있는 방법이 존재한다. 바로 Random 순간이동이다.
+
+## Random Teleports
+
+Spider trap을 방지하기 위해 Random walk 도중 확률적으로 Graph 내의 랜덤한 Node로 순간이동을 하고, out-link가 없는 Dead end를 만나는 경우엔 100% 확률로 순간이동을 하면(Graph의 모든 Node로 향하는 out-link가 있는 셈) 두 문제가 모두 해결된다.
+
+아래는 random 순간이동까지 적용한 최종 수식이다. 참고로 일반적으로 순간이동이 발생하지 않을 확률인 \\(\beta\\)는 0.8~0.9로 설정한다.
 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/PageRank/example2.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/PageRank-How-to-solve/math1.png" style="width: 65%"/>
 </p>
 
 <br>
 
-## Connection to Random Walk
-
-수식적으로 풀어보았으니 이제 직관적으로도 이해해보자. 이제는 PageRank를 이전에 배운 Random Walk와 연결지어 생각해보려고 한다.
-
-uniformly(모든 확률이 동등하게) random하게 out-link를 클릭하며 웹서핑을 하는 사람이 있다고 가정해보자. 이러한 과정이 무한하게 지속되면 웹서퍼는 어디에 존재하게 될까?
-
-서퍼가 \\(t\\)라는 시점에 \\(i\\)라는 페이지에 존재할 가능성을 \\(p(t)\\)라는 벡터에서 i번째에 들어가는 값이라고 하자. 그러면 \\(p(t)\\)는 페이지들에 대한 확률분포가 된다.
-
-그러면 \\(t+1\\) 시점에 웹서퍼는 행렬 \\(M\\)에 \\(p(t)\\)를 곱한 확률 분포를 가지게 된다.
-
-그렇다면 어느 시점에 웹서퍼가 \\(p(t+1) = M \cdot p(t) = p(t)\\)인 상태에 도달했다고 가정해보자. 이 지점에서는 stationary distribution(정적분포) 상태가 된다. 그리고 이는 이전에 살펴본 \\(r = M \cdot r\\)과 같으므로, \\(r\\) 자체가 random walk에서의 stationary distribution이라는 의미이다.
-
-이러한 flow 기반의 수식이 flow로 해석될 수도 있고, 방금과 같이 무한히 random walk하는 사람이 시작지점과 무관하게 stationary distribution한 곳으로 회귀하는 것으로 해석할 수도 있다. 이를 계산하는 것이 곧 위에서 보았던 재귀적인 수식을 계산하는 것과 동일한 것이다.
-
-여기서 한가지의 관점을 더 추가해보자.
-
-위에서 본 \\(r = M \cdot r\\) 식을 \\(1 \cdot r = M \cdot r\\)이라고 본다면, 이는 eigenvector/eigenvalue 공식과도 구조가 같아진다. 즉, \\(M\\)이 1이라는 eigenvalue를 가질 때, eigenvector가 \\(r\\)인 것이다.
-
-그리고 이때의 r은 \\(M(M(M(...Mu)))\\)처럼 웹서퍼가 \\(u\\)에서 시작하여 무한히 많은 random walk후의 위치이다.
-
-다음 포스트에서는 이러한 \\(r\\)을 효율적으로 구하는 방법인 Power Iteration에 대해 배워보도록 하겠다.
-
-
-<br>
-<br>
-<br>
-
-## summary
+아래는 random 순간이동(초록색 화살표)를 추가한 예시 그림이다. 최종 converge된 결과를 통해 m > y > a의 중요도를 갖는다는 것을 확인할 수 있다.
 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/PageRank/summary.png" style="width: 65%"/>
+  <img src="{{site.baseurl}}/assets/img/PageRank-How-to-solve/example2.png" style="width: 60%"/>
 </p>
 
 <br>
+
+아래는 또다른 예시 그림이다. 위에서 언급했던 3가지 궁금증(필요)을 모두 해결한 모습이다. 또한 random 순간이동 덕에 중요도 점수가 0인 Node가 존재하지 않고, E와 in-link의 수는 같지만 중요한 Node로 부터의 in-link가 많은 B가 가장 중요한 모습을 보인다. 또한 C는 in-link가 하나뿐이지만 해당 link를 B로부터 받아 중요도가 높게 책정되는 모습이 우리가 원하던 합리적인 결과를 보인다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/PageRank-How-to-solve/example3.png" style="width: 50%"/>
+</p>
+
+<br>
+
+## Summary
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/PageRank-How-to-solve/summary.png" style="width: 70%"/>
+</p>
+
+<br>
+
 
 ### 출처, 더 궁금하다면?
 [Stanford CS224W: Machine Learning with Graphs | 2021 | Lecture 4.2 - PageRank: How to Solve?](https://youtu.be/rK2ZBmQHVVs?si=05J4VewpcLELSUjZ)
