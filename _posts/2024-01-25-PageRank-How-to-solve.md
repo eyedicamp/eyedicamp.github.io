@@ -71,6 +71,10 @@ comments: true
 
 다행히 위 2가지를 한번에 해결할 수 있는 방법이 존재한다. 바로 Random 순간이동이다.
 
+<br>
+<br>
+<br>
+
 ## Random Teleports
 
 Spider trap을 방지하기 위해 Random walk 도중 확률적으로 Graph 내의 랜덤한 Node로 순간이동을 하고, out-link가 없는 Dead end를 만나는 경우엔 100% 확률로 순간이동을 하면(Graph의 모든 Node로 향하는 out-link가 있는 셈) 두 문제가 모두 해결된다.
