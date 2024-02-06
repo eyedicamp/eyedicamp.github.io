@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Embedding Entire Graphs"
+title: "[3.3] Embedding Entire Graphs"
 date:   2024-01-23
 excerpt: "그래프 단위로 embedding 하는 방법"
 tag: 

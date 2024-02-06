@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Traditional Feature-based Methods : Node"
+title: "[2.1] Traditional Feature-based Methods : Node"
 date:   2024-01-18
 excerpt: "전통적인 feature-based 방법들(Node-Level)"
 tag: 

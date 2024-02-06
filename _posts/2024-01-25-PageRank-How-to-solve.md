@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PageRank: How to solve?"
+title: "[4.2] PageRank: How to solve?"
 date:   2024-01-25
 excerpt: "PageRank를 풀어내는 수학적 방법"
 tag: 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Choice of Graph Representation"
+title: "[1.3] Choice of Graph Representation"
 date:   2024-01-17
 excerpt: "문제에 따른 그래프 표현 방법"
 tag: 

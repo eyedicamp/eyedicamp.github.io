@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Random Walk Approaches for Node"
+title: "[3.2] Random Walk Approaches for Node"
 date:   2024-01-22
 excerpt: "Random Walk란?"
 tag: 

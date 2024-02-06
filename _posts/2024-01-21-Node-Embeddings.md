@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Node Embeddings"
+title: "[3.1] Node Embeddings"
 date:   2024-01-21
 excerpt: "Node Embedding이란?"
 tag: 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Traditional Feature-based Methods : Link"
+title: "[2.2] Traditional Feature-based Methods : Link"
 date:   2024-01-19
 excerpt: "전통적인 feature-based 방법들(Link-Level)"
 tag: 

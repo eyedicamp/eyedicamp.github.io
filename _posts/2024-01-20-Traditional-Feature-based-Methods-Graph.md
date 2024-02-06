@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Traditional Feature-based Methods : Graph"
+title: "[2.3] Traditional Feature-based Methods : Graph"
 date:   2024-01-20
 excerpt: "전통적인 feature-based 방법들(Graph-Level)"
 tag: 

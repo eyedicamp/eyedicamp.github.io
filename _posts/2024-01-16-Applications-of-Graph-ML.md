@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Applications of Graph ML"
+title: "[1.2] Applications of Graph ML"
 date:   2024-01-16
 excerpt: "그래프 머신러닝 적용 사례"
 tag: 
