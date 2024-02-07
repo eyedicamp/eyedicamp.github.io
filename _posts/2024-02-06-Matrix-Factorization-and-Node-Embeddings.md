@@ -23,7 +23,7 @@ comments: true
 
 <br>
 
-오늘 설명할 Matrix Factorization은 이보다 더 심플하다. 두 Node가 edge로 연결되어 있다면 이들을 유사하다고 정의하고, \\(z_{v}^{T}z_u\\)를 유사한 경우 1, 유사하지 않은 경우 0으로 만드는 것이다. 이는 다른말로 하면, \\(z_{v}^{T}z_u\\)를 adjacency matrix A에서의 \\(A_{u,v}\\)와 같게 하는, 즉, matrix 전체의 단위로 보면 \\(Z^{T}Z = A\\)로 만들고자 하는 것이다.
+오늘 설명할 Matrix Factorization은 이보다 더 심플하다. 두 Node가 edge로 연결되어 있다면 이들을 유사하다고 정의하고, \\(z_{v}^{T}z_u\\)를 유사한 경우 1, 유사하지 않은 경우 0으로 만드는 것이다. 이는 다른말로 하면, \\(z_{v}^{T}z_u\\)를 adjacency matrix \\(A\\)에서의 \\(A_{u,v}\\)와 같게 하는, 즉, matrix 전체의 단위로 보면 \\(Z^{T}Z = A\\)로 만들고자 하는 것이다.
 
 <br>
 
@@ -43,7 +43,7 @@ comments: true
 
 <br>
 
-결론적으로, edge의 연결로 유사도를 정의한 내적 decoder는 adjacency matrix A의 matrix factorization과 같다.
+결론적으로, edge의 연결로 유사도를 정의한 내적 decoder는 adjacency matrix \\(A\\)의 matrix factorization과 같다.
 
 <br>
 <br>
