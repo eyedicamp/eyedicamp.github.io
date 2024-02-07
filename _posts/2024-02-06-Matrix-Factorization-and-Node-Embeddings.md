@@ -19,11 +19,11 @@ comments: true
 
 <br>
 
-위 그림은 이전 강의에서 배웠던 Node embedding에 대한 설명이다. 유사한 두 노드 \\[(u, v)\\]에 대해 \\[z_{v}^{T}z_u\\]를 최대화 하는 것이 이러한 Node embedding의 목표이다.
+위 그림은 이전 강의에서 배웠던 Node embedding에 대한 설명이다. 유사한 두 노드 \\((u, v)\\)에 대해 \\(z_{v}^{T}z_u\\)를 최대화 하는 것이 이러한 Node embedding의 목표이다.
 
 <br>
 
-오늘 설명할 Matrix Factorization은 이보다 더 심플하다. 두 Node가 edge로 연결되어 있다면 이들을 유사하다고 정의하고, \\[z_{v}^{T}z_u\\]를 유사한 경우 1, 유사하지 않은 경우 0으로 만드는 것이다. 이는 다른말로 하면, \\[z_{v}^{T}z_u\\]를 adjacency matrix A에서의 \\[A_{u,v}\\]와 같게 하는, 즉, matrix 전체의 단위로 보면 \\[Z^{T}Z = A\\]로 만들고자 하는 것이다.
+오늘 설명할 Matrix Factorization은 이보다 더 심플하다. 두 Node가 edge로 연결되어 있다면 이들을 유사하다고 정의하고, \\(z_{v}^{T}z_u\\)를 유사한 경우 1, 유사하지 않은 경우 0으로 만드는 것이다. 이는 다른말로 하면, \\(z_{v}^{T}z_u\\)를 adjacency matrix A에서의 \\(A_{u,v}\\)와 같게 하는, 즉, matrix 전체의 단위로 보면 \\(Z^{T}Z = A\\)로 만들고자 하는 것이다.
 
 <br>
 
@@ -33,7 +33,7 @@ comments: true
 
 <br>
 
-하지만 임베딩 matrix의 차원 d(d는 Z의 행의 갯수(=feature의 수)와 같다.)는 Graph 내의 Node의 수 n보다 많이 적다. 따라서 정확하게 \\[A = Z^{T}Z\\]가 되는것은 불가능하지만, 대략적으로 유사하게 하는것은 가능하다. 이를 위해 \\[Z\\]를 조정하여 \\[A - Z^{T}Z\\]가 0에 가깝게, 즉, L2 norm(Frobenius norm)이 최소가 되도록 하는것이 목표이다.
+하지만 임베딩 matrix의 차원 d(d는 Z의 행의 갯수(=feature의 수)와 같다.)는 Graph 내의 Node의 수 n보다 많이 적다. 따라서 정확하게 \\(A = Z^{T}Z\\)가 되는것은 불가능하지만, 대략적으로 유사하게 하는것은 가능하다. 이를 위해 \\(Z\\)를 조정하여 \\(A - Z^{T}Z\\)가 0에 가깝게, 즉, L2 norm(Frobenius norm)이 최소가 되도록 하는것이 목표이다.
 
 <br>
 
