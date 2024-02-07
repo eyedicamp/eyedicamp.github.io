@@ -63,9 +63,7 @@ correlation을 갖게하는 2가지 의존성이 존재한다.
 
 #### 1. Homophily
 
-Homophily를 한마디로 표현하면 "유유상종"이다. 즉, 유사한 관심사/취미를 갖거나 유사한 특성들을 가진 Node들끼리 관계를 맺게 되고, 가까워진다는 것이다. 
-
-<br>
+Homophily를 한마디로 표현하면 "유유상종"이다. 즉, 유사한 관심사/취미를 갖거나 유사한 특성들을 가진 Node들끼리 관계를 맺게 되고, 가까워진다는 것이다.
 
 #### 2. Influence
 
@@ -131,7 +129,7 @@ Unlabeled Node \\(v\\)의 label \\(Y_v\\)를 어떻게 예측하느냐?
 
 몇몇 Node들은 \\(\color{green}0\\)또는 \\(\color{red}1\\)의 label을 가진다.
 
-모든 feature와 Network가 주어졌을 때, \\(P(Y_{v})\\)를 구하라
+모든 feature와 Network가 주어졌을 때, \\(P(Y_{v})\\)를 구하라.
 
 <br>
 
@@ -155,4 +153,4 @@ Unlabeled Node \\(v\\)의 label \\(Y_v\\)를 어떻게 예측하느냐?
 
 
 ### 출처, 더 궁금하다면?
-[Stanford CS224W: ML with Graphs | 2021 | Lecture 5.1 - Message passing and Node Classification](https://youtu.be/6g9vtxUmfwM?si=yDTOOA0y7HgBgOwR)
+[Stanford CS224W: ML with Graphs | 2021 | Lecture 5.1 - Message passing and Node Classification](https://youtu.be/6g9vtxUmfwM?si=yDTOOA0y7HgBgOwR){:target="_blank"}

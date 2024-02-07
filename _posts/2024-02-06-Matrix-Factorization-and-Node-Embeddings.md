@@ -105,4 +105,4 @@ Node2vec 또한 matrix factorization으로 공식화 될 수 있다. 이는 Rand
 
 
 ### 출처, 더 궁금하다면?
-[Stanford CS224W: ML with Graphs | 2021 | Lecture 4.4 - Matrix Factorization and Node Embeddings](https://youtu.be/r12qJZZVtqc?si=h8faE662WNA5lp7Q)
+[Stanford CS224W: ML with Graphs | 2021 | Lecture 4.4 - Matrix Factorization and Node Embeddings](https://youtu.be/r12qJZZVtqc?si=h8faE662WNA5lp7Q){:target="_blank"}
