@@ -28,7 +28,7 @@ comments: true
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/adjacency.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/adjacency.png" style="width: 65%"/>
 </p>
 
 <br>
@@ -38,7 +38,7 @@ comments: true
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/math1.png" style="width: 25%"/>
+  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/math1.png" style="width: 23%"/>
 </p>
 
 <br>
@@ -56,7 +56,7 @@ Deepwalk나 node2vec은 더 복잡한 node 유사도의 정의를 가지고 있�
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/math2.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/math2.png" style="width: 70%"/>
 </p>
 
 <br>
@@ -78,7 +78,7 @@ Node2vec 또한 matrix factorization으로 공식화 될 수 있다. 이는 Rand
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/example1.png" style="width: 65%"/>
+  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/example1.png" style="width: 50%"/>
 </p>
 
 <br>
@@ -96,7 +96,7 @@ Node2vec 또한 matrix factorization으로 공식화 될 수 있다. 이는 Rand
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/summary.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/Matrix-Factorization-and-Node-Embeddings/summary.png" style="width: 70%"/>
 </p>
 
 <br>
