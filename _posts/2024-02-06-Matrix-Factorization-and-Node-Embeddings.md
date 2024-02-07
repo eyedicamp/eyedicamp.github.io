@@ -61,7 +61,9 @@ Deepwalk나 node2vec은 더 복잡한 node 유사도의 정의를 가지고 있�
 
 <br>
 
-Node2vec 또한 matrix factorization으로 공식화 될 수 있다. 이는 Random walk보다 더 복잡하므로 해당 [논문](https://arxiv.org/pdf/1710.02971.pdf)을 참고하자.
+위 식을 기존 공식에서의 adjacency matrix \\(A\\)와 대체하여 \\(- Z^{T}Z\\)를 최소화하는 \\(Z\\)를 구하면 Random Walk based 임베딩을 구할 수 있다.
+
+Node2vec 또한 matrix factorization으로 공식화 될 수 있다. 이는 Random walk보다 더 복잡하므로 해당 [논문](https://arxiv.org/pdf/1710.02971.pdf){:target="_blank"}을 참고하자.
 
 <br>
 <br>
