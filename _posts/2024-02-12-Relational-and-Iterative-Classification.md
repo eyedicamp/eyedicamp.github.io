@@ -74,6 +74,9 @@ iterate진행함 파이1으로 레이블 없는 노드에 레이블 부여, z를
 주변 Y를 토대로 z를 업데이트, z를 활용하여 파이2로 Y예측 이걸 반복. 클래스 레이블이 converge되면 끝
 
 
+예시
+
+먼저 파이1로 예측하고 ground truth와 비교
 
 <br>
 <br>
@@ -93,81 +96,7 @@ correlation을 갖게하는 2가지 의존성이 존재한다.
 
 <br>
 
-#### 1. Homophily
 
-Homophily를 한마디로 표현하면 "유유상종"이다. 즉, 유사한 관심사/취미를 갖거나 유사한 특성들을 가진 Node들끼리 관계를 맺게 되고, 가까워진다는 것이다.
-
-#### 2. Influence
-
-Influence는 그와 반대로 "친하면 닮는다"이다. 이미 관계를 맺고 있는 Node들은 서로 영향을 주고받으며 유사한 관심사/취미를 갖게되거나 유사한 특성을 갖게 되는 것이다.
-
-<br>
-
-이러한 영향력을 주고받는 현상들을 어떻게 사용할 수 있을까? 한가지 방법은 "연좌제"이다.
-
-label X와 연결되어있는 Node라면 label X를 가지고 있을 확률이 높다. 따라서 유해한 웹페이지와 같은 경우, 유해한 페이지와 link를 주고받는 페이지의 경우, 해당 페이지도 유해한 페이지일 것으로 추측할 수 있다.
-
-Collective Classification 이 외에도 아래와 같은 다양한 분야에서 활용 가능하다.
-
-<br>
-
-<p align="center">
-  <img src="{{site.baseurl}}/assets/img/Message-passing-and-Node-Classification/example3.png" style="width: 60%"/>
-</p>
-
-<br>
-<br>
-<br>
-
-## Collective Classification Overview
-
-correlation을 이용하여 연결된 Node들을 순차적으로 classification을 진행하고자 한다. 이를 위해 Markov Assumption을 사용할 것이다. 이는 Node\\(v\\)의 label\\(Y_v\\)가 Node\\(v\\)의 직속?(거리가 1인) 이웃들 \\(N_v\\)에 의해서만 결정되도록 하는 방식이다. 이를 식으로 나타내면 아래와 같다.
-
-\\[P(Y_{v}) = P(Y_{v} \vert N_{v})\\]
-
-Collective Classification은 다음 3가지 단계를 가진다.
-
-<br>
-
-<p align="center">
-  <img src="{{site.baseurl}}/assets/img/Message-passing-and-Node-Classification/steps.png" style="width: 75%"/>
-</p>
-
-<br>
-
-#### 1. Local Classifier
-
-Local Classifier는 색이 없던 Gray Node들에게 initial한 레이블을 부여해준다. 이에 Node의 attribute와 feature정보를 이용한 기본적인 Classification 방식이 사용되고, 네트워크에 대한 정보는 사용되지 않는다.
-
-#### 2. Relational Classifier
-
-Relational Classifier는 Node들 간의 correlation을 찾아서 classifier가 이웃의 label/attribute을 이용해 Node 레이블링을  하는 과정이다. 이 과정에서 네트워크에 대한 정보가 사용된다.
-
-#### 3. Collective Inference
-
-Collective Inference 과정에서는 네트워크가 converge 되거나, 사전에 정해둔 수의 iteration이 채워질 때까지 네트워크 전체의 correlation을 반복적으로 전파하는 과정이다. 이 과정에서 네트워크 구조가 최종 결과에 영향을 미친다.
-
-<br>
-<br>
-<br>
-
-## Problem Setting
-
-앞으로 해결하고자 하는 문제는 다음과 같다.
-
-Unlabeled Node \\(v\\)의 label \\(Y_v\\)를 어떻게 예측하느냐?
-
-각 Node \\(v\\)는 feature vector \\(f_v\\)를 갖는다.
-
-몇몇 Node들은 \\(\color{green}0\\)또는 \\(\color{red}1\\)의 label을 가진다.
-
-모든 feature와 Network가 주어졌을 때, \\(P(Y_{v})\\)를 구하라.
-
-<br>
-
-<p align="center">
-  <img src="{{site.baseurl}}/assets/img/Message-passing-and-Node-Classification/problem.png" style="width: 50%"/>
-</p>
 
 <br>
 <br>
