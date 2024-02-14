@@ -20,7 +20,7 @@ converge가 일어나거나, 미리 설정해둔 iteration 최대값이 될때�
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/math1.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/math.png" style="width: 60%"/>
 </p>
 
 <br>
@@ -29,7 +29,15 @@ converge가 일어나거나, 미리 설정해둔 iteration 최대값이 될때�
 
 이러한 Relational Classification은 Convergence가 보장되어있지 않고, Node feature 정보를 사용하지 않는다는 단점이 있다.
 
+<br>
+<br>
+<br>
+
+### Relational Classification의 예시
+
 아래는 Relational Classification을 초기화하고, Node ID 순서대로 업데이트 하는 예시를 나타내고 있다. 이때, 이미 레이블링 된 Node는 고정으로 두고, 회색 Node만 업데이트를 진행한다.
+
+먼저, 레이블이 없는 Node는 0.5로 초기화한다.
 
 <br>
 
@@ -38,6 +46,41 @@ converge가 일어나거나, 미리 설정해둔 iteration 최대값이 될때�
 </p>
 
 <br>
+
+이후, Node ID 순서대로 이웃 Node들의 \\(P(Y_{u})\\)의 평균값으로 업데이트한다. (Iteration 1)
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example2.png" style="width: 60%"/>
+</p>
+
+<br>
+
+이후, Converge한 Node는 그대로 두고, 아직 Converge되지 않은 Node들에 대해서만 업데이트를 반복한다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example3.png" style="width: 40%"/>
+</p>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example4.png" style="width: 40%"/>
+</p>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example5.png" style="width: 40%"/>
+</p>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example6.png" style="width: 40%"/>
+</p>
+
+<br>
+
+모든 Node들이 Converge 되었다면, \\(P(Y_{v}) > 0.5\\)인 Node들은 Class1로, \\(P(Y_{v}) < 0.5\\)인 Node들은 Class0로 배정한다.
+
 
 하지만 이러한 Relational Classification은 위에서 언급했듯 Node attribute를 전혀 활용하지 않는다. Node attribute를 활용하려면 어떻게 해야할까?
 
@@ -63,51 +106,112 @@ Iterative Classification은 Node \\(v\\)에 대하여 \\(f_v\\)의 feature vecto
 
 Iterative Classifier들은 2가지 Phase를 통해 사용된다.
 
-#### Phase 1: Node attribute만을 사용하여 Classify
+* Phase 1 : Node attribute만을 사용하여 Classify (training set)
 
-파이1을 이용하여 모든 노드에 임의의 레이블을 부여해줌
-파이2 또한 train할거임. 얘는 f랑 z둘다 활용해서 예측함
+먼저 \\(\phi_{1}(f_{v})\\)를 이용하여 \\(Y_v\\)를 초기화한다. 이를 통해 정해진 \\(Y_v\\)를 이용해 \\(z_{v}\\)를 계산하고, \\(\phi_{2}(f_{v},z_{v})\\)로 \\(Y_v\\)를 예측한다.
 
-페이즈2
-iterate진행함 파이1으로 레이블 없는 노드에 레이블 부여, z를 계산하고 파이2를 이용해서 레이블 예측
+* Phase 2 : Iterate till convergence (test set)
 
-주변 Y를 토대로 z를 업데이트, z를 활용하여 파이2로 Y예측 이걸 반복. 클래스 레이블이 converge되면 끝
+위에서와 마찬가지로 \\(\phi_{1}\\)으로 \\(Y_v\\)를 구한 후, \\(z_{v}\\)를 계산하고, \\(\phi_{2}\\)로 레이블을 예측한다.
 
+이후, \\(N_v\\)에 속한 \\(Y_u\\)들이 변하면 다시 \\(z_{v}\\)를 계산하고, 업데이트 된 \\(z_{v}\\)를 이용하여  \\(Y_u\\)를 다시 예측하는 것을 반복한다.
 
-예시
-
-먼저 파이1로 예측하고 ground truth와 비교
+이를 Class 레이블이 stabilize 되거나, 미리 정해둔 max iteration이 충족될 때까지 반복한다.
 
 <br>
 <br>
 <br>
 
-## Correlation
+### Iterative Classification의 예시
 
-individual한 특징도 네트워크 내에서 연관되어 있다. Graph 내에서 이야기하자면, 가까운 Node들은 같은 색(= label, class)를 갖는 경향성이 있다.
-
-correlation을 갖게하는 2가지 의존성이 존재한다.
+먼저 Node attribute \\(f_v\\)를 이용하여 \\(\phi_{1}\\)을 초기화한다. 이 과정에서 가운데 Node가 정답이 1인데 0으로 오답을 출력한 것을 확인할 수 있다.
 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Message-passing-and-Node-Classification/example2.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example7.png" style="width: 50%"/>
 </p>
 
 <br>
 
-
-
-<br>
-<br>
-<br>
-
-## Overview
+이후, \\(\phi_{1}\\)으로 예측한 레이블로, vector \\(z_v\\)를 계산한다. 해당 예시에서는 \\(z_v\\)에 2가지 요소를 사용했는데, I는 incoming neighbor, O는 outgoing neighbor를 의미하고 각 vector에서 왼쪽 값은 Class0의 수, 오른쪽 값은 Class1의 수를 의미한다.
 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Message-passing-and-Node-Classification/overview.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example8.png" style="width: 50%"/>
+</p>
+
+<br>
+
+다음으로 step1에서 \\(\phi_{1}\\)과 \\(\phi_{2}\\)의 training을 진행한다. 이때, 각 Classifier의 training에는 초록색과 빨간색 동그라미친 부분을 이용한다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example9.png" style="width: 50%"/>
+</p>
+
+<br>
+
+test set인 step2에서는 학습이 완료된 \\(\phi_{1}\\)으로 초기 \\(Y_v\\)를 지정한다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example10.png" style="width: 50%"/>
+</p>
+
+<br>
+
+그리고 이전과 마찬가지로 \\(z_v\\)를 계산하고,
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example11.png" style="width: 50%"/>
+</p>
+
+<br>
+
+구해진 \\(z_v\\)를 이용해 \\(\phi_{2}\\)로 모든 Node들을 다시 Classify한다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example12.png" style="width: 50%"/>
+</p>
+
+<br>
+
+이때, 레이블이 바뀌면 \\(z_v\\)또한 변하므로, 다시 \\(z_v\\)를 계산하고,
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example13.png" style="width: 50%"/>
+</p>
+
+<br>
+
+다시 계산한 \\(z_v\\)를 이용해 \\(\phi_{2}\\)로 모든 Node들을 다시 Classify하는 과정을 모든 Node Class가 converge되거나 max iteration에 도달할 때까지 반복한다.
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example14.png" style="width: 50%"/>
+</p>
+
+<br>
+<br>
+<br>
+
+## Summary
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/summary.png" style="width: 70%"/>
 </p>
 
 <br>
