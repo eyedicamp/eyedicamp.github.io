@@ -137,7 +137,7 @@ Iterative Classifier들은 2가지 Phase를 통해 사용된다.
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example7.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example7.png" style="width: 55%"/>
 </p>
 
 <br>
@@ -157,7 +157,7 @@ Iterative Classifier들은 2가지 Phase를 통해 사용된다.
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example9.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example9.png" style="width: 45%"/>
 </p>
 
 <br>
