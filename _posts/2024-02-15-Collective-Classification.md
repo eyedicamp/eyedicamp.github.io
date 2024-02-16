@@ -37,19 +37,19 @@ Message Passing의 기본 전제는 이전 Node로부터 메시지를 받으면 
 
 <br>
 
-#### Label-label potential matrix \\(\psi\\)
+#### - Label-label potential matrix \\(\psi\\)
 
 \\(\psi(Y_{i},Y_{j})\\)는 Node \\(j\\)의 이웃 Node \\(i\\)의 Class가 \\(Y_i\\)일 때, \\(j\\)의 Class가 \\(Y_j\\)일 확률이다.
 
-#### Prior belief \\(\phi\\)
+#### - Prior belief \\(\phi\\)
 
 \\(\phi(Y_i)\\)는 Node \\(i\\)의 Class가 \\(Y_i\\)일 확률이다.
 
-#### \\(m_{i \rightarrow j}(Y_j)\\)
+#### - \\(m_{i \rightarrow j}(Y_j)\\)
 
 \\(m_{i \rightarrow j}(Y_j)\\)는 Node \\(i\\)가 Node \\(j\\)에게 보내는 메시지로, Node \\(j\\)의 Class가 \\(Y_j\\)일 확률에 대한 추정치를 담고있다.
 
-#### \\(L\\)
+#### - \\(L\\)
 
 모든 Class 종류의 집합이다.
 
@@ -96,7 +96,7 @@ Message Passing의 기본 전제는 이전 Node로부터 메시지를 받으면 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Collective-Classification/example4.png" style="width: 20%"/>
+  <img src="{{site.baseurl}}/assets/img/Collective-Classification/example4.png" style="width: 30%"/>
 </p>
 
 <br>
@@ -108,7 +108,7 @@ Message Passing의 기본 전제는 이전 Node로부터 메시지를 받으면 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Collective-Classification/example5.png" style="width: 23%"/>
+  <img src="{{site.baseurl}}/assets/img/Collective-Classification/example5.png" style="width: 35%"/>
 </p>
 
 <br>

@@ -13,7 +13,7 @@ comments: true
 
 기본적인 아이디어는 이웃 Node들의 Class 확률의 weighted average를 이용하여 Node \\(v\\)의 Class 확률 \\(Y_v\\)를 구하는 것이다.
 
-레이블이 있는 Node는 레이블의 값(\\(Y_{v}^*))으로, 레이블이 없는 Node는 \\(Y_{v} = 0.5\\)로 초기화 한다.
+레이블이 있는 Node는 레이블의 값(\\(Y_{v}^*\\))으로, 레이블이 없는 Node는 \\(Y_{v} = 0.5\\)로 초기화 한다.
 
 converge가 일어나거나, 미리 설정해둔 iteration 최대값이 될때까지 업데이트한다. 이 때, Node Label과 Network의 구조만 활용하고, Node attribute는 사용하지 않는다.
 
@@ -25,7 +25,7 @@ converge가 일어나거나, 미리 설정해둔 iteration 최대값이 될때�
 
 <br>
 
-위는 업데이트에 대한 공식으로, Node \\(v\\)가 레이블 \\(c\\)를 가질 확률(\\(P(Y_{u} = c)\\))은 이웃 Node들이 레이블 \\(c\\)를 가질 확률의 합을 degree로 나눈 값, 즉 평균이라고 정한다. 이때, 경우에 따라 \\(A_{v,u})를 곱해 weight를 부여한다.
+위는 업데이트에 대한 공식으로, Node \\(v\\)가 레이블 \\(c\\)를 가질 확률(\\(P(Y_{u} = c)\\))은 이웃 Node들이 레이블 \\(c\\)를 가질 확률의 합을 degree로 나눈 값, 즉 평균이라고 정한다. 이때, 경우에 따라 \\(A_{v,u}\\)를 곱해 weight를 부여한다.
 
 이러한 Relational Classification은 Convergence가 보장되어있지 않고, Node feature 정보를 사용하지 않는다는 단점이 있다.
 
@@ -62,19 +62,19 @@ converge가 일어나거나, 미리 설정해둔 iteration 최대값이 될때�
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example3.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example3.png" style="width: 50%"/>
 </p>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example4.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example4.png" style="width: 50%"/>
 </p>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example5.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example5.png" style="width: 50%"/>
 </p>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example6.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Relational-and-Iterative-Classification/example6.png" style="width: 50%"/>
 </p>
 
 <br>
@@ -92,9 +92,15 @@ converge가 일어나거나, 미리 설정해둔 iteration 최대값이 될때�
 
 Iterative Classification은 Node \\(v\\)에 대하여 \\(f_v\\)의 feature vector를 만들고, 이웃 노드의 집합 \\(N_v\\)의 \\(f_v\\)에 대한 summary인 \\(z_v\\)를 활용하여 레이블 \\(Y_v\\)를 예측한다. 이 과정에서 2개의 Classifier를 사용하는데, 이는 아래와 같다.
 
-* \\(\phi_{1}(f_{v}) = \\) feature vector \\(f_v\\)만을 사용하여 Node 레이블을 예측한다.
+<br>
 
-* \\(\phi_{2}(f_{v}, z_{v}) = \\) feature vector \\(f_v\\)와 Node \\(v\\)의 이웃의 레이블 summary \\(z_v\\)를 활용하여 레이블을 예측한다.
+#### - \\(\phi_{1}(f_{v})\\)
+
+feature vector \\(f_v\\)만을 사용하여 Node 레이블을 예측한다.
+
+#### - \\(\phi_{2}(f_{v}, z_{v})\\)
+
+feature vector \\(f_v\\)와 Node \\(v\\)의 이웃의 레이블 summary \\(z_v\\)를 활용하여 레이블을 예측한다.
 
 <br>
 
@@ -106,11 +112,13 @@ Iterative Classification은 Node \\(v\\)에 대하여 \\(f_v\\)의 feature vecto
 
 Iterative Classifier들은 2가지 Phase를 통해 사용된다.
 
-* Phase 1 : Node attribute만을 사용하여 Classify (training set)
+<br>
+
+#### Phase 1 : Node attribute만을 사용하여 Classify (training set)
 
 먼저 \\(\phi_{1}(f_{v})\\)를 이용하여 \\(Y_v\\)를 초기화한다. 이를 통해 정해진 \\(Y_v\\)를 이용해 \\(z_{v}\\)를 계산하고, \\(\phi_{2}(f_{v},z_{v})\\)로 \\(Y_v\\)를 예측한다.
 
-* Phase 2 : Iterate till convergence (test set)
+#### Phase 2 : Iterate till convergence (test set)
 
 위에서와 마찬가지로 \\(\phi_{1}\\)으로 \\(Y_v\\)를 구한 후, \\(z_{v}\\)를 계산하고, \\(\phi_{2}\\)로 레이블을 예측한다.
 
