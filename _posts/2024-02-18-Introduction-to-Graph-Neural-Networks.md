@@ -51,7 +51,7 @@ Encoder는 각 Node를 Low-dimensional vector로 매핑하고, Decoder는 vector
 
 Embedding matrix가 존재할 때, Encoder는 Embedding을 look-up하는 역할만을 하는 것이다.
 
-하지만 이러한 Shallow Encoder의 경우, \\(O(|V|)\\)개의 파라미터를 요구하고, inductive가 아니고 transductive하여, training 과정에서 학습하지 못한 embedding은 생성하지 못한다. 또한 Node feature를 활용하지 않는다는 단점들이 존재한다.
+하지만 이러한 Shallow Encoder의 경우, \\(O(\vert V \vert)\\)개의 파라미터를 요구하고, inductive가 아니고 transductive하여, training 과정에서 학습하지 못한 embedding은 생성하지 못한다. 또한 Node feature를 활용하지 않는다는 단점들이 존재한다.
 
 <br>
 <br>
