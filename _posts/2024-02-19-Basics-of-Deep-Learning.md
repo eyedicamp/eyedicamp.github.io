@@ -18,7 +18,7 @@ GNN에 본격적으로 들어가기 전, 우선 Deep Learning에 대해 간단�
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Basics-of-Deep-Learning/math1.png" style="width: 80%"/>
+  <img src="{{site.baseurl}}/assets/img/Basics-of-Deep-Learning/math1.png" style="width: 70%"/>
 </p>
 
 <br>
@@ -40,7 +40,7 @@ GNN에 본격적으로 들어가기 전, 우선 Deep Learning에 대해 간단�
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Basics-of-Deep-Learning/math2.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/Basics-of-Deep-Learning/math2.png" style="width: 30%"/>
 </p>
 
 <br>
@@ -73,7 +73,7 @@ Stochastic gradient descent는 매 step마다 dataset의 subset인 minibatch \\(
 <br>
 <br>
 
-## Neural Network Fuction
+## Neural Network Function
 
 <br>
 
@@ -130,12 +130,16 @@ Stochastic gradient descent는 매 step마다 dataset의 subset인 minibatch \\(
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Basics-of-Deep-Learning/example3.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/Basics-of-Deep-Learning/example3.png" style="width: 70%"/>
 </p>
 
 <br>
 
 위의 예시에서와 같이 기본적인 Neural Network의 함수에 bias를 더하고, 이를 non-linear 함수로 묶어서 식을 만들면, 이를 여러 계층을 통과시켰을 때 모든 형태의 함수를 표현 가능하게 되는 것이다.
+
+<br>
+<br>
+<br>
 
 ## Summary
 
