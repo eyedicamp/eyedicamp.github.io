@@ -17,7 +17,7 @@ graph \\(G\\)에 대해서
 
 * \\(V\\)는 vertex의 set
 * \\(A\\)는 adjacency matrix
-* \\(X \in \mathbb{R}^{m \times \vert V \vert} \\)는 node feature의 matrix
+* \\(X\\)는 node feature의 matrix
 * \\(v\\)는 \\(V\\)에 속한 node
 * \\(N(v)\\)는 \\(v\\)의 neighbor의 집합
 
