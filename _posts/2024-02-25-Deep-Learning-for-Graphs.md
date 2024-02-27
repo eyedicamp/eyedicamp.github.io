@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[6.3] Deep Learning for Graphs"
-date:   2024-02-19
+date:   2024-02-25
 excerpt: "Graph를 위한 Deep Learning의 개요"
 tag: 
  - Machine Learning with Graphs
@@ -17,7 +17,7 @@ graph \\(G\\)에 대해서
 
 * \\(V\\)는 vertex의 set
 * \\(A\\)는 adjacency matrix
-* \\(X \in \mathbb{R} ^ {m \times |V|}\\)는 node feature의 matrix
+* \\(X \in \mathbb{R}^{m \times |V|} \\)는 node feature의 matrix
 * \\(v\\)는 \\(V\\)에 속한 node
 * \\(N(v)\\)는 \\(v\\)의 neighbor의 집합
 
@@ -53,7 +53,7 @@ Naive한 방법에서 위와같은 문제들이 발생하여 CNN 방식을 Graph
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/example2.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/example2.png" style="width: 50%"/>
 </p>
 
 <br>
@@ -63,7 +63,7 @@ Naive한 방법에서 위와같은 문제들이 발생하여 CNN 방식을 Graph
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/example3.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/example3.png" style="width: 60%"/>
 </p>
 
 <br>
@@ -141,7 +141,7 @@ Naive한 방법에서 위와같은 문제들이 발생하여 CNN 방식을 Graph
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/math2.png" style="width: 80%"/>
+  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/math2.png" style="width: 65%"/>
 </p>
 
 <br>
@@ -173,7 +173,7 @@ Graph 내에서 유사한 Node들은 유사한 Embedding을 가질 것이므로,
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/math4.png" style="width: 75%"/>
+  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/math4.png" style="width: 50%"/>
 </p>
 
 <br>
@@ -199,19 +199,19 @@ Cross entropy loss를 계산할 때는 아래와 같은 수식을 이용한다. 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/overview1.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/overview1.png" style="width: 60%"/>
 </p>
 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/overview2.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/overview2.png" style="width: 60%"/>
 </p>
 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/overview3.png" style="width: 70%"/>
+  <img src="{{site.baseurl}}/assets/img/Deep-Learning-for-Graphs/overview3.png" style="width: 60%"/>
 </p>
 
 <br>
