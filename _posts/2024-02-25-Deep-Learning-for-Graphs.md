@@ -23,6 +23,9 @@ graph \\(G\\)에 대해서
 
 위와 같이 정의를 해두고 시작해보자.
 
+<br>
+<br>
+<br>
 
 ## A Naive Approach
 
