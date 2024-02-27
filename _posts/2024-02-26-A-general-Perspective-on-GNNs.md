@@ -26,7 +26,7 @@ Graph augmentation 또한 고려요소이다. Raw input graph와 computational g
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/A-general-Perspective-on-GNNs/example.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/A-general-Perspective-on-GNNs/example.png" style="width: 75%"/>
 </p>
 
 <br>
