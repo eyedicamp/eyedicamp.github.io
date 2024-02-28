@@ -76,7 +76,7 @@ Message Aggregation은 메시지를 aggregation을 통해 임베딩으로 바꾸
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/A-Single-Layer-of-a-GNN/math1.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/A-Single-Layer-of-a-GNN/math1.png" style="width: 40%"/>
 </p>
 
 <br>
@@ -152,7 +152,7 @@ Attention mechanism \\(a\\)는 아래의 그림과 같이 두 노드의 임베�
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/A-Single-Layer-of-a-GNN/math6.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/A-Single-Layer-of-a-GNN/math6.png" style="width: 80%"/>
 </p>
 
 <br>
@@ -168,7 +168,7 @@ Attention mechanism \\(a\\)는 아래의 그림과 같이 두 노드의 임베�
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/A-Single-Layer-of-a-GNN/math7.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/A-Single-Layer-of-a-GNN/math7.png" style="width: 45%"/>
 </p>
 
 <br>
@@ -192,7 +192,7 @@ Batch Normalization은 Node 임베딩을 평균을 0, 분산을 1로 만들기 �
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/A-Single-Layer-of-a-GNN/math8.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/A-Single-Layer-of-a-GNN/math8.png" style="width: 70%"/>
 </p>
 
 <br>
