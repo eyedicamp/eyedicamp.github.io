@@ -46,7 +46,7 @@ GNN으로 학습하기 어려운 구조들이 존재한다. 예를들면 어떤 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Graph-Augmentation-for-GNNs/example.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/Graph-Augmentation-for-GNNs/example2.png" style="width: 50%"/>
 </p>
 
 <br>
