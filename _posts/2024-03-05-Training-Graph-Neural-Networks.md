@@ -29,6 +29,8 @@ comments: true
 
 Prediction Head는 final node의 output을 의미하며, node/link/graph level의 task level에 따라 다른 prediction head가 존재한다.
 
+<br>
+
 #### Prediction Heads : Node-level
 
 Node level에서는 Node 임베딩을 이용해 바로 prediction을 할 수 있다. 아래 그림의 \\(h\\)는  GNN의 계산을 마친 후의 d차원의 노드 임베딩이고, 이를 그대로 k차원의 행렬 \\(W^{(H)}\\)에 곱하여 예측값인 \\(\hat y_{v}\\)을 얻는다. 이 결과로 k-way prediction(Classification, Regression 등)의 Prediction Head를 구할 수 있다.
@@ -48,7 +50,7 @@ Edge-level의 경우, Node 임베딩 pair로 prediction을 한다.
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math2.png" style="width: 25%"/>
+  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math2.png" style="width: 35%"/>
 </p>
 
 <br>
@@ -80,7 +82,7 @@ Edge-level의 경우, Node 임베딩 pair로 prediction을 한다.
 </p>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math5.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math5.png" style="width: 60%"/>
 </p>
 
 <br>
@@ -98,7 +100,7 @@ Graph-level prediction은 그래프 내의 모든 Node 임베딩을 사용한다
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math6.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math6.png" style="width: 40%"/>
 </p>
 
 <br>
@@ -115,14 +117,14 @@ Graph-level에서도 다양한 함수를 \\(Head\\)로 사용할 수 있다.
 
 이러한 함수를 사용할 경우, 작은 그래프에서는 잘 동작할지 모르지만, 큰 그래프에서는 문제가 발생한다.
 
-\\(G_{1}:{-1,-2,0,1,2}\\)와 \\(G_{2}:{-10,-20,0,10,20}\\)인 두 Node 임베딩이 존재할 때, Mean이나 Sum을 사용하면 두 임베딩의 차이를 구분할 수 없게 된다.
+\\(G_{1} : \lbrace -1,-2,0,1,2 \rbrace \\)와 \\(G_{2} : \lbrace -10,-20,0,10,20 \rbrace \\)인 두 Node 임베딩이 존재할 때, Mean이나 Sum을 사용하면 두 임베딩의 차이를 구분할 수 없게 된다.
 
 이를 해결하기 위해 Hierarchical Global Pooling을 사용한다. 이는 Pooling을 한번에 하는게 아니라 sequential하게 진행하는 방식이다. 아래의 예시에서는 먼저 앞 2개와 뒤 3개의 임베딩을 pooling하고, 결과로 나온 2개의 임베딩을 다시 pooling하고있다. 추가적으로 단순히 Sum하는 것이 아닌, non-linear함수인 ReLU를 추가한 pooling 방식을 사용하고 있다. 이를 통해 \\(G_{1}\\)과 \\(G_{2}\\)를 구분할 수 있게 되는 것을 확인할 수 있다.
 
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math8.png" style="width: 40%"/>
+  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math8.png" style="width: 60%"/>
 </p>
 
 <br>
@@ -136,7 +138,7 @@ DiffPool에서는 이를 다음과 같이 해결한다. 2개의 GNN을 이용하
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/example2.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/example2.png" style="width: 65%"/>
 </p>
 
 <br>
@@ -246,7 +248,7 @@ Classification은 Multi-class의 경우에는 기본적은 accuracy를 사용한
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math13.png" style="width: 60%"/>
+  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math13.png" style="width: 70%"/>
 </p>
 
 <br>
@@ -256,7 +258,7 @@ Classification은 Multi-class의 경우에는 기본적은 accuracy를 사용한
 <br>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math14.png" style="width: 50%"/>
+  <img src="{{site.baseurl}}/assets/img/Training-Graph-Neural-Networks/math14.png" style="width: 65%"/>
 </p>
 
 <br>
