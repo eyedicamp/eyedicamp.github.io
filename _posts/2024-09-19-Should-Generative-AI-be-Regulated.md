@@ -8,8 +8,6 @@ tag:
 comments: true
 ---
 
-## Should Generative AI be Regulated?
-
 <br>
 
 <p align="center">
