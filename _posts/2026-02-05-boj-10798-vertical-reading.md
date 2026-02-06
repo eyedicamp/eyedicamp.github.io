@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "[BOJ 10798] 세로읽기 - 파이썬 문자열/리스트 다루기 (join, zip_longest)"
-date: 2026-02-05 00:00:00 +0900
+title: "[BOJ 10798] 세로읽기"
+date: 2026-02-05
+excerpt: "백준 문제 풀이"
 categories: [Algorithm, BOJ]
 tags: [python, string, list, join, itertools]
 ---
