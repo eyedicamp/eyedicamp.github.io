@@ -17,7 +17,8 @@ tags: [github-pages, codex, javascript, html, css, japanese]
 
 이를 위해 HTML/CSS/Vanilla JavaScript 기반의 경량 웹 앱을 만들고 GitHub Pages로 배포했다.
 
-👉 배포 URL: https://eyedicamp.github.io/lets_read_japanese/
+🚀 **Live Demo**  
+👉 **[https://eyedicamp.github.io/lets_read_japanese/](https://eyedicamp.github.io/lets_read_japanese/)**
 
 ---
 
@@ -98,6 +99,9 @@ GPT-Codex에 아래 키워드로 질문을 던졌다.
 ---
 
 ## 🧪 UI 상태 예시
+
+🔗 **Live Demo 바로가기**  
+👉 **[https://eyedicamp.github.io/lets_read_japanese/](https://eyedicamp.github.io/lets_read_japanese/)**
 
 아래 스크린샷은 제작 과정에서 캡처해둔 화면이다.
 
