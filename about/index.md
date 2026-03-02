@@ -41,7 +41,7 @@ comments: false
 <br><br>
 
 ## My Certificates
-* **OPIc : **(2026.02.07)
+* **OPIc : IH**(2026.02.07)
 
 * **TOEIC : 975점**(2023.11.12)
 
