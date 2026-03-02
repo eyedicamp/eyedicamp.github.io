@@ -5,10 +5,9 @@ excerpt: "A List of Projects"
 comments: false
 ---
 
-{% raw %}
 ## Projects
 
-{% assign items = site.posts | where_exp: "p", "p.categories contains 'projects'" %}
+{% assign items = site.posts | where_exp: "p", "p.categories contains 'projects'" | sort: "date" | reverse %}
 {% if items.size == 0 %}
 No project posts found. Make sure your project post has `categories: [projects, ...]`.
 {% else %}
@@ -22,4 +21,3 @@ No project posts found. Make sure your project post has `categories: [projects, 
   {% endfor %}
 </ul>
 {% endif %}
-{% endraw %}
