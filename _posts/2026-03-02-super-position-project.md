@@ -11,8 +11,13 @@ tags: [QUBO, domain-wall, quantum-annealing, simulated-annealing, dwave, fastapi
 
 주간 시간표(가중치/선호/야간 페널티)를 입력하면, **Domain-wall QUBO(BQM)** 로 “회의 시작 시간”을 최적화해 **최적 후보(Top‑K)와 시각화**까지 제공하는 웹 앱.
 
-- Live Demo: https://eyedicamp.github.io/SuperPosition/frontend/
-- GitHub Repo: https://github.com/eyedicamp/SuperPosition
+- Live Demo: <a href="https://eyedicamp.github.io/SuperPosition/frontend/" target="_blank" rel="noopener noreferrer">https://eyedicamp.github.io/SuperPosition/frontend/</a>
+- GitHub Repo: <a href="https://github.com/eyedicamp/SuperPosition" target="_blank" rel="noopener noreferrer">https://github.com/eyedicamp/SuperPosition</a>
+
+<p align="center">
+  <img src="{{ '/assets/img/super-position-project/super_position_webpage.png' | relative_url }}" alt="Super Position — webpage screenshot" width="1000" />
+</p>
+
 
 ---
 
