@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Project] Super Position — QUBO 기반 회의시간 최적화 (SA/QA, D‑Wave)"
-date: 2026-03-02 18:00:00 +0900
+date: 2026-03-02 17:30:00 +0900
 excerpt: "QUBO로 회의 시작 시간을 정식화하고 Simulated Annealing / Quantum Annealing(D‑Wave)로 최적해를 찾는 웹 서비스"
 categories: [Projects, QuantumComputing]
 tags: [QUBO, quantum-annealing, simulated-annealing, dwave, fastapi, javascript, optimization]
