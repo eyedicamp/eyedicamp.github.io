@@ -5,6 +5,7 @@ date: 2026-03-02 17:30:00 +0900
 excerpt: "주간 시간표를 QUBO(BQM)로 정식화하고 Simulated Annealing / Quantum Annealing(D‑Wave)로 최적 회의 시작 시간을 찾는 웹 서비스"
 categories: [projects, quantumcomputing]
 tags: [QUBO, domain-wall, quantum-annealing, simulated-annealing, dwave, fastapi, javascript, optimization]
+project: true
 ---
 
 ## 한 줄 요약
