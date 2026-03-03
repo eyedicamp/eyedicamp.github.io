@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "[Web] 히라가나 & 가타카나 읽기 연습 웹페이지 제작 후기"
+title: "[Project] 히라가나 & 가타카나 읽기 연습 웹페이지 제작 후기"
 date: 2026-02-08
 excerpt: "GPT-Codex로 2시간 안에 웹앱을 만들고 배포한 기록과 구현 설명"
-categories: [web, project]
+categories: [projects, web]
 tags: [github-pages, codex, javascript, html, css, japanese]
+project: true
 ---
 
 ## ✨ 프로젝트 소개
